@@ -1,2 +1,2 @@
 # FlaskOnReplit
-Developing web application on replit platform with flask framework
+This GitHub repository hosts the source code for a full-stack webpage developed on Replit. The webpage utilizes a combination of front-end technologies like HTML, CSS, and JavaScript for the client-side interface, and back-end technologies such as Flask for server-side functionality. The project demonstrates the integration of both front-end and back-end components to create a dynamic and interactive web application. The repository includes the necessary files and configurations to deploy the webpage on Replit and provides instructions for running and further development.
