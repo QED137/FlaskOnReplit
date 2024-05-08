@@ -162,3 +162,5 @@ cython_debug/
 .upm
 poetry.lock
 pyproject.toml
+.replit
+replit.nix
