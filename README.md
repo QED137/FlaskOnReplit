@@ -66,7 +66,6 @@ bash
 
 **Database Setup (Important Security Note):**
 
-```markdown
 ## Database Setup
 
 **Security Warning:**
