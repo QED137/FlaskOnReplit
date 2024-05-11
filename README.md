@@ -3,11 +3,57 @@ Welcome to our GitHub repository! Here, we've stored all the code for a website 
 
 On the front end, we've used technologies like HTML (which gives the webpage its structure), CSS (which makes it look nice), and JavaScript (which adds interactive features like buttons and animations).
 
-But what makes this website really cool is the back end. We've used something called Flask, which is like a magic engine that runs on the server (a powerful computer somewhere on the internet). Flask helps us do things like handle user input, process data, and respond to requests from the front end.
+Job Advertisement Website
 
-So, when you visit our website, you're actually interacting with both the front end and the back end at the same time!
+This project is a job advertisement website built using HTML, CSS, JavaScript, and Flask. It allows users to view and apply for job listings posted by employers.
+Features
 
-In this repository, you'll find all the files and code we used to create this website. You can explore it, learn from it, and even use it as a starting point for your own projects. We've also included instructions on how to run the website yourself and make changes if you want to customize it.
+    Job Listings: View a list of available job positions.
+    Apply for Jobs: Users can apply for jobs directly through the website.
+    Admin Panel: Employers can post new job listings and manage existing ones through an admin panel.
 
+Technologies Used
+
+    Frontend: HTML, CSS, JavaScript
+    Backend: Flask
+    Database: MySQL
+    Cloud Platforms:
+        Development: Replit
+        Database Hosting: filess.io
+
+Installation
+
+    Clone the repository:
+
+    bash
+
+   git clone
+
+Install dependencies:
+
+bash
+
+pip install -r requirements.txt
+
+Set up MySQL database and configure connection settings in config.py.
+
+Run the application:
+
+bash
+
+    python app.py
+
+    Access the website at http://localhost:5000.
+
+Contributing
+
+Contributions are welcome! Please follow the Contributing Guidelines.
+License
+
+This project is licensed under the MIT License.
+Acknowledgements
+
+    Thanks to Replit for providing a cloud platform for development.
+    Thanks to filess.io for hosting the MySQL database.
 
 
