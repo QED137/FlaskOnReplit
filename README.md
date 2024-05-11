@@ -1,11 +1,8 @@
-# Full-Stack with Flask deployed on cloud: Job Advertisement Website
-Welcome to our GitHub repository! Here, we've stored all the code for a website we built using a platform called Replit, which is a cloud-based development environment. This website is special because it's not just a regular webpage – it's what we call a "full-stack" webpage. That means it has both a front end (the part you see and interact with) and a back end (the behind-the-scenes part that makes things work).
+# Full-Stack Job Board Demo: Flask & Replit (Mock Data), cloud platform
+Welcome to our GitHub repository! 
 
-On the front end, we've used technologies like HTML (which gives the webpage its structure), CSS (which makes it look nice), and JavaScript (which adds interactive features like buttons and animations).
-
-
-
-This project is a job advertisement website built using HTML, CSS, JavaScript, and Flask. It allows users to view and apply for job listings posted by employers.
+This project is a web application for job advertisements, built using HTML/CSS/JavaScript for the frontend, Flask for the backend, and SQLAlchemy for database interaction. The development and production has been done on cloud platform
+It allows users to view and apply for job listings posted by employers.
 Features
     Job Listings: View a list of available job positions.
     Apply for Jobs: Users can apply for jobs directly through the website.
