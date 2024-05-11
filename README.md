@@ -30,16 +30,7 @@ Install dependencies:
 bash
 
 pip install -r requirements.txt
-
-Set up MySQL database and configure connection settings in config.py.
-
-Run the application:
-
-bash
-
-    python app.py
-
-    Access the website at http://localhost:5000.
+# Click for WebPage https://web-development-with-flask.onrender.com/#
 
 
 **Prerequisites:**
