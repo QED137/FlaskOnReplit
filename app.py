@@ -16,9 +16,13 @@ app = Flask(__name__)
 def hello_world():
   JOBS=load_data_from_db()
   return render_template('index.html', jobs=JOBS)
+  
 
+'''This function retrieves a list of jobs from the database and returns them as JSON data. The data is read-only and cannot be modified. This function serves as an API endpoint for accessing job listings.'''
 @app.route("/api/jobs")
+
 def list_jobs():
+  JOBS=load_data_from_db()
   return jsonify(JOBS)
 
 if __name__ == "__main__":

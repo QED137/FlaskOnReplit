@@ -1,4 +1,13 @@
- h1 {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+.welcome-text {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.6;
+}
+h1 {
    background: #f0f0f0;
   font-size: 40px;
   font-family: Roboto;
