@@ -30,7 +30,7 @@ Install dependencies:
 bash
 
 pip install -r requirements.txt
-# Click for WebPage https://web-development-with-flask.onrender.com/#
+# Click for WebPage https://web-development-with-flask.onrender.com/
 
 
 **Prerequisites:**
