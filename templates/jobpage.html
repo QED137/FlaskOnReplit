@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{{job.title}} - At Tech World</title>
+  {% include 'bootstrap.html' %}
+</head>
+<body>
+  {% include 'navbar.html' %}
+  {% include 'banner.html' %}
+  <div class="container">
+    <h1 class="text-center mt-2 mb-4">Tech World Job</h1>
+    <div class="row">
+      
+        <h3>{{job.title}}</h3>
+        <h5>Location:</h5> 
+        <p class ="lead">{{job.location}}</p>
+      <h5>Responsibility:</h5> 
+      
+         <ul>
+           {% for line in job.responsibility.split(".") %}
+               {% if line.strip() %}
+                   <li class = "lead">{{ line.strip() }}</li>
+               {% endif %}
+           {% endfor %}
+
+         </ul>
+        <h5>Requirements:</h5>
+       <ul>
+         {% for line in job.requirements.split(".") %}
+             {% if line.strip() %}
+                 <li class="lead">{{ line.strip() }}</li>
+             {% endif %}
+         {% endfor %}
+       </ul> 
+      <h5>Salary:</h5>
+      <p class="lead">€{{ job.salary }} </p>
+  </div>
+  {% include 'footer.html' %}
+</body>
+</html>
