@@ -57,6 +57,7 @@ import sqlalchemy
 from sqlalchemy import create_engine, text
 import os
 
+
 my_secret = os.environ['GOOGLE_MYSQL_DB']
 
 
