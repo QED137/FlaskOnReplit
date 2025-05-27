@@ -34,7 +34,10 @@
        </ul> 
       <h5>Salary:</h5>
       <p class="lead">€{{ job.salary }} </p>
+     <!-- <a href="application_form/{{job.id}}" class="btn btn-outline-primary float-right align-middle">Application</a> -->
+      {% include 'application_form.html' %}
   </div>
+    
   {% include 'footer.html' %}
 </body>
 </html>

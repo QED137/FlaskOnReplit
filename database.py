@@ -1,15 +1,10 @@
 from sqlalchemy import create_engine, Table, Column, Integer, String, MetaData, ForeignKey, DateTime, text
 from sqlalchemy.engine import result
 import os
+import logging
+from sqlalchemy.exc import SQLAlchemyError
 
-db_coonection_string = os.environ["DATABASE_CONNECT_STRING"] #keeping safe
-engine = create_engine(db_coonection_string)
-
-'''with engine.connect() as conn:
-  result= conn.execute(text("SELECT * FROM posts"))
-  print("type(result)",type(result))
-  print(result.all())
-  print("print(type(result.all()))",type(result.all()))'''
+engine = create_engine("mysql+pymysql://myfirstDB_goprettywe:b5f69eae773cb5af8088dcefc48e1e17ce71e8f0@8zg.h.filess.io/myfirstDB_goprettywe?charset=utf8mb4")
 #print(type(engine))
 #how to get data back from mysql
 # Establish a connection to the database and execute a query
@@ -26,3 +21,15 @@ def load_data_from_db():
 
     # Print the list of dictionaries representing the query result
     return result_dicts
+def load_job_fromDB(id):
+    with engine.connect() as conn:
+        result = conn.execute(text("SELECT * FROM posts WHERE id = :val"), {"val": id})
+        rows = result.fetchall()
+        if len(rows) == 0:
+            return None
+        else:
+            return rows[0]
+
+print(load_job_fromDB(1))
+#the following code is for retriveing data from the webpage and psuhing it into the database
+
