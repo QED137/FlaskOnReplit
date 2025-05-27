@@ -17,7 +17,7 @@
       <h5>Responsibility:</h5> 
       
          <ul>
-           {% for line in job.responsibility.split(".") %}
+           {% for line in job.responsibilities.split("\n") %}
                {% if line.strip() %}
                    <li class = "lead">{{ line.strip() }}</li>
                {% endif %}
@@ -25,13 +25,13 @@
 
          </ul>
         <h5>Requirements:</h5>
-       <ul>
-         {% for line in job.requirements.split(".") %}
+       <ol>
+         {% for line in job.requirements.split("\n") %}
              {% if line.strip() %}
                  <li class="lead">{{ line.strip() }}</li>
              {% endif %}
          {% endfor %}
-       </ul> 
+       </ol> 
       <h5>Salary:</h5>
       <p class="lead">€{{ job.salary }} </p>
      <!-- <a href="application_form/{{job.id}}" class="btn btn-outline-primary float-right align-middle">Application</a> -->

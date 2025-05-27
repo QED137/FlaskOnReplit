@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import SQLAlchemyError
 import logging
 from sqlalchemy.sql import func
-from database import load_data_from_db #push_data_to_db
+from database import load_data_from_db, load_job_fromDB #push_data_to_db
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
@@ -27,13 +27,13 @@ def list_jobs():
   return jsonify(JOBS)
     
 
-# @app.route("/job/<id>")
+@app.route("/job/<id>")
 
-# def show_job(id):
-#   job = load_job_fromDB(id)
-#   if not job:
-#     return "Not Found", 404
-#   return  render_template('jobpage.html', job=job)
+def show_job(id):
+  job = load_job_fromDB(id)
+  if not job:
+    return "Not Found", 404
+  return  render_template('jobpage.html', job=job)
 #   #return jsonify(job)
 # @app.route("/job/<id>/apply", methods=['POST'])
 # def apply_to_job(id):
