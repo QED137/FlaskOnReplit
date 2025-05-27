@@ -56,8 +56,6 @@ from functools import partialmethod
 import sqlalchemy
 from sqlalchemy import create_engine, text
 import os
-#print(sqlalchemy.__version__)
-
 
 my_secret = os.environ['GOOGLE_MYSQL_DB']
 
