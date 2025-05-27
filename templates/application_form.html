@@ -1,33 +1,46 @@
-<h4>Application form</h4>
-<form action="/job/{{job['id']}}/apply" method="post">
-  <div class = "mb-2">
-  <label>Full Name</label> <br>
-  <input type="text" name = "full_name" placeholder="Your full name">  <br>
-    </div>
-  
-  <div class = "mb-2">
-  <label for="email">Your Email</label> <br>
-  <input type="text" name = "email" placeholder="your email"> <br>
+<h4 class="text-center mb-4">Application Form</h4>
+
+<form action="/job/{{ job['id'] }}/apply" method="post" class="container shadow p-4 rounded">
+
+  <!-- Full Name -->
+  <div class="mb-3">
+    <label for="full_name" class="form-label">Full Name</label>
+    <input type="text" name="full_name" id="full_name" class="form-control" placeholder="Your full name" required>
   </div>
-  
-  <div class = "mb-2">
-  <label for="linkedin">LinkedIn URL</label> <br>
-  <input type="text" name = "linkdin_url" placeholder="your linkdn"> <br>
+
+  <!-- Email -->
+  <div class="mb-3">
+    <label for="email" class="form-label">Your Email</label>
+    <input type="email" name="email" id="email" class="form-control" placeholder="Your email" required>
   </div>
-  <div class="mb-2">
-    <label for="education">Education</label> <br>
-    <textarea name="education" id="education" cols="30" rows="10"></textarea>
-  </div> <br>
-  <div class="mb-2">
-    <lable for="experince">Experience</lable> <br>
-    <textarea name= "experience" id ="experince" cols ="30" rows="10"></textarea>
-  </div> <br>
-    <div class="mb-2">
-      <label for="resume_url">Resume Url</label> <br>
-      <input type="text" name="resume_url" id="resume_url">
-    </div> <br>
-    <div class = "mb-2">
-    <input type="submit" name = "submit"">
+
+  <!-- LinkedIn URL -->
+  <div class="mb-3">
+    <label for="linkedin_url" class="form-label">LinkedIn URL</label>
+    <input type="url" name="linkedin_url" id="linkedin_url" class="form-control" placeholder="Your LinkedIn URL (optional)">
   </div>
-  
+
+  <!-- Education -->
+  <div class="mb-3">
+    <label for="education" class="form-label">Education</label>
+    <textarea name="education" id="education" class="form-control" rows="5" placeholder="Enter your education background" required></textarea>
+  </div>
+
+  <!-- Work Experience -->
+  <div class="mb-3">
+    <label for="work_experience" class="form-label">Experience</label>
+    <textarea name="work_experience" id="work_experience" class="form-control" rows="5" placeholder="Enter your work experience" required></textarea>
+  </div>
+
+  <!-- Resume URL (Optional) -->
+  <div class="mb-3">
+    <label for="resume_url" class="form-label">Resume URL (Optional)</label>
+    <input type="url" name="resume_url" id="resume_url" class="form-control" placeholder="Enter your resume URL or 'N/A'" value="N/A">
+  </div>
+
+  <!-- Submit Button -->
+  <div class="d-flex justify-content-end">
+    <button type="submit" name="submit" class="btn btn-primary">Submit Application</button>
+  </div>
+
 </form>

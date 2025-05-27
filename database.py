@@ -56,7 +56,20 @@ def load_job_fromDB(id):
         else:
             # Convert row into a dictionary using column names as keys
             return dict(zip(result.keys(), row))
-        
-        
-result1 = load_data_from_db()
-print(result1[1])
+
+def push_application_data_to_db(id, data):
+    with engine.connect() as conn:
+        query = text("INSERT INTO applications (job_id, full_name, email, linkedin_url, education, work_experience, resume_url) VALUES (:job_id, :full_name, :email, :linkedin_url, :education, :work_experience, :resume_url)")
+        conn.execute(query, {
+            "job_id": id,
+            "full_name": data['full_name'],
+            "email": data['email'],
+            "linkedin_url": data['linkedin_url'],
+            "education": data['education'],
+            "work_experience": data['work_experience'],
+            "resume_url": data['resume_url']
+        })
+
+if __name__=="__main__":
+    result1 = load_data_from_db()
+    print(result1[1])
