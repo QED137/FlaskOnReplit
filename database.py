@@ -114,15 +114,13 @@ def get_db_connection():
             database=DB_NAME,
             port=3306,
             charset='utf8mb4',
-            cursorclass=pymysql.cursors.DictCursor, # This makes fetchall() return list of dicts
+            cursorclass=pymysql.cursors.DictCursor, 
             ssl=ssl_args
         )
         print(f"Successfully connected to database: {DB_NAME} on {DB_HOST}")
         return conn
     except pymysql.Error as e:
         print(f"Error connecting to MySQL Database: {e}")
-        # Consider how you want to handle this error. Re-raise? Return None?
-        # For now, let's re-raise so the caller knows connection failed.
         raise
 
 def load_data_from_db():
@@ -148,7 +146,7 @@ def load_job_from_db(job_id):
     try:
         conn = get_db_connection()
         with conn.cursor() as cursor: # Using DictCursor
-            # Use %s as placeholder for PyMySQL, and pass values as a tuple
+           
             cursor.execute("SELECT * FROM jobs WHERE id = %s", (job_id,))
             row = cursor.fetchone() # fetchone() with DictCursor returns a single dict or None
             return row # This is already a dictionary or None
@@ -228,10 +226,3 @@ if __name__ == "__main__":
         'work_experience': '2 years as a Developer',
         'resume_url': 'https://example.com/resume.pdf'
     }
-    # Make sure example_job_id exists in your 'jobs' table before running this
-    # or the foreign key constraint will fail if you have one.
-    # success = push_application_data_to_db(example_job_id, example_application_data)
-    # if success:
-    # print("Test application submitted.")
-    # else:
-    # print("Test application submission failed.")

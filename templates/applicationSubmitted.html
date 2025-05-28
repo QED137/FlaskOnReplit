@@ -1,64 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Application Submitted</title>
-  {% include 'bootstrap.html' %}
-  
-</head>
-<body>
-  {% include 'navbar.html' %} 
-  {% include 'banner.html' %}
-  <div class="container">
-    <h1 class="text-center mt-2 mb-4">Tech World Job</h1>
-    <div class="row">
-      <p style="margin-top: 20px;">Congratulation!! Your Application for <b>{{ job['title'] }}</b> Submitted</p>
-  <h4>Full Name </h4>
-  <div>{{applications['full_name']}}</div>
-
-
-  <h4>Email</h4>
-  <div>{{applications['email']}}</div>
-  <h4>LinkedIn URL</h4>
-  <div>{{applications['linkdin_url']}}</div>
-  <h4>Education</h4>
-  <div>{{applications['education']}}</div>
-  <h4>Experience</h4>
-  <div>{{applications['experience']}}</div>
-  <h4>Resume URL</h4>
-  <div>{{applications['resume_url']}}</div>
-
-    </div>
-     {% include 'footer.html' %}
-  
-</body>
-</html> -->
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application Submitted</title>
-</head>
-<body>
-    <h1>Thank you for applying!</h1>
-    <h2>Job: {{ job.title }}</h2>
-    <p>Your application has been submitted successfully.</p>
-
-    <h3>Application Details:</h3>
-    <ul>
-        <li><strong>Full Name:</strong> {{ applications['full_name'] }}</li>
-        <li><strong>Email:</strong> {{ applications['email'] }}</li>
-        <li><strong>LinkedIn URL:</strong> {{ applications['linkedin_url'] }}</li>
-        <li><strong>Education:</strong> {{ applications['education'] }}</li>
-        <li><strong>Work Experience:</strong> {{ applications['work_experience'] }}</li>
-        <li><strong>Resume URL:</strong> <a href="{{ applications['resume_url'] }}" target="_blank">View Resume</a></li>
-    </ul>
-</body>
-</html> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -155,7 +94,7 @@
     <!-- Footer (optional) -->
     {% include 'footer.html' %}
 
-    <!-- Bootstrap JS (optional, for Bootstrap components that require JS) -->
+    <!-- Bootstrap  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

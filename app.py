@@ -61,4 +61,4 @@ def apply_to_job(id):
         return jsonify({'error': 'Only POST requests are allowed for this route'})'''
 
 if __name__ == "__main__":
-  app.run(host='0.0.0.0', port=8080, debug=True)
+  app.run(host='0.0.0.0', port=8080, debug=True) #for testing locally
